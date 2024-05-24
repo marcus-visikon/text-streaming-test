@@ -17,7 +17,6 @@ function TextStreamingContent() {
   const [streamText, setStreamText] = useState<string>('');
 
   useEffect(() => {
-    //@ts-ignore
     fetch('http://localhost:2312', { reactNative: { textStreaming: true }}).then(async res => {
       const decoder = new TextDecoder('utf-8');
       if (!res.body) {

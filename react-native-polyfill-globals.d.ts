@@ -9,3 +9,9 @@ declare module 'react-native-polyfill-globals/src/readable-stream' {
 declare module 'react-native-polyfill-globals/src/fetch' {
   export function polyfill(): void;
 }
+
+interface RequestInit {
+  reactNative?: {
+    textStreaming?: boolean;
+  }
+}
